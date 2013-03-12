@@ -17,10 +17,12 @@ public partial class Default2 : System.Web.UI.Page
         {
             TableCell[] td = new TableCell[8];
             HyperLink link = new HyperLink();
-            link.NavigateUrl = "~/Calendar.aspx?ID=" + ID[ii];
+            link.NavigateUrl = "~/Calendar.aspx?AdvisorID=" + ID[ii];
             for (int i = 0; i < 8; i++) { td[i] = new TableCell(); }
 
             link.Text = get.getName(ID[ii]);
+            link.ForeColor=System.Drawing.Color.Yellow;
+        //    link.Font.Bold = true;
             td[0].Controls.Add(link);
             td[1].Text = get.getDepartment(ID[ii]);
             td[2].Text = get.getMonday(ID[ii]);

@@ -16,6 +16,9 @@ public class ronUtil2
 
 
     public string[] DaysAvailable { get; set; }
+
+
+
     public string FullName { get; set; }
 
     public ronUtil2()
@@ -26,7 +29,7 @@ public class ronUtil2
 	public ronUtil2( int id)
 	{
         DaysAvailable = getDaysAvailable(id);
-
+     
         SqlDataSource SqlDataSource3 = new SqlDataSource();
         SqlDataSource3.ConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString();
         SqlDataSource3.SelectCommand = "Select First_Name,Last_Name From Advisor Where Employee_ID='" + id.ToString() + "'";
@@ -168,11 +171,8 @@ public class ronUtil2
       
             DateTime start = DateTime.Parse(table.Rows[0][0].ToString());
             DateTime end = DateTime.Parse(table.Rows[0][1].ToString());
-               
             double dbltime = ((end - start).TotalHours) * 2;
-
             int inttime = Convert.ToInt32(dbltime);
-
             DateTime[] advisorSlots = new DateTime[inttime];
 
             for (int i = 0; i < inttime; i++)
@@ -213,7 +213,7 @@ public class ronUtil2
         DateTime[] slots = advisorAllSlots;
         DateTime[] available = new DateTime[length];
 
-        int counter = 0; int counter1 = 0;
+        int counter = 0;
         if (taken.Length == 0)
         { available = advisorAllSlots; }
         else
@@ -235,7 +235,7 @@ public class ronUtil2
             for (int i = 0; i < slots.Length; i++)
             {
                 if (slots[i] != DateTime.Now)
-                { available[counter1] = slots[i]; counter1++; }
+                { available[counter] = slots[i]; counter++; }
             }
 
 
@@ -276,7 +276,9 @@ public class ronUtil2
 
         string[] days = new string[table.Rows.Count];
         for (int ii = 0; ii < table.Rows.Count; ii++)
-        { days[ii] = table.Rows[ii][0].ToString(); }
+        { days[ii] = table.Rows[ii][0].ToString().Trim(); 
+        
+        }
         return days;
     }
 
@@ -316,5 +318,40 @@ public class ronUtil2
 
         return check;
     }
+
+
+
+    public string[] getAdvisor2WeekSchedule(int id)
+    {
+        DateTime now = DateTime.Today;
+        DateTime last = now.AddDays(8);
+        DateTime[] allDays = new DateTime[8];
+
+        for (int i = 0; i < allDays.Length; i++)
+        {
+            allDays[i] = now.AddDays(i);
+        }
+
+
+
+        string date = null;
+        for (int i = 0; i < allDays.Length; i++)
+        {
+            for (int ii = 0; ii < DaysAvailable.Length; ii++)
+            {
+                if (allDays[i].DayOfWeek.ToString() == DaysAvailable[ii])
+                {
+
+                    date = allDays[i].ToShortDateString() + "," + date;
+                }
+            }
+        }
+
+
+        Char[] splitChars = new Char[] { ',' };
+        string[] splitdate = date.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
+        return splitdate;
+    }
+
 
 }
