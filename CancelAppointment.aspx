@@ -5,7 +5,7 @@
         
           <div class="post" id="post-5">
             <div class="post-title">
-              <center><h2><a href="#">Student Registration</a></h2></center>
+              <center><h2><a href="#">Appointment Cancellation</a></h2></center>
             </div>
             <div class="post-entry">
               <div class="post-entry-top">
@@ -39,23 +39,31 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 137px" valign="middle">
+                            <td style="width: 137px; height: 24px;" valign="top" align="right">
+                                <asp:Label ID="Llbcomment" runat="server" style="font-weight: 700" 
+                                    Text="Reason for cancel"></asp:Label>
+                                </td>
+                            <td style="width: 221px; height: 24px;" valign="top">
+                                <asp:TextBox ID="txtComments" runat="server" Width="171px" Height="69px"></asp:TextBox>
+                            </td>
+                            <td valign="middle" style="height: 24px">
+                                </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 137px; height: 24px;" valign="middle">
                                 &nbsp;</td>
-                            <td style="width: 221px" valign="top">
+                            <td style="width: 221px; height: 24px;" valign="top">
                                 <asp:Button ID="btncheck" runat="server" Text="See your appointments" 
                                     Width="219px" onclick="btnCheck_click" />
                             </td>
-                            <td valign="middle">
+                            <td valign="middle" style="height: 24px">
                                 &nbsp;</td>
                         </tr>
                         <tr>
                         <td style="width: 137px; text-align: right" valign="middle">
-                                <asp:Label ID="Llbcomment" runat="server" style="font-weight: 700" 
-                                    Text="Reason to Cancel"></asp:Label>
-                            </td>
+                                &nbsp;</td>
                             <td style="width: 221px" valign="middle">
-                                <asp:TextBox ID="txtComments" runat="server" Width="200px" Height="70px"></asp:TextBox>
-                            </td>
+                                &nbsp;</td>
 
                         </tr>
 
@@ -66,22 +74,33 @@
                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                                      autogenerateselectbutton="True" selectedindex="0" 
                                     onselectedindexchanged="GridView1_SelectedIndexChanged" 
-                                    onrowdeleting="GridView1_RowDeleting">
+                                    onrowdeleting="GridView1_RowDeleting" CellPadding="4" ForeColor="#333333" 
+                                    GridLines="None" Width="458px">
+                                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                     <Columns>
-                                    <asp:BoundField DataField="Appointment_ID" HeaderText="Appointment_ID" 
+                                    <asp:BoundField DataField="Appointment_ID" HeaderText="Appointment ID" 
                                             SortExpression="Appointment_ID" />
-                                        <asp:BoundField DataField="Student_Id" HeaderText="Student_Id" 
+                                        <asp:BoundField DataField="Student_Id" HeaderText="Student Id" 
                                             SortExpression="Student_Id" />
                                             <asp:BoundField DataField="Comment" HeaderText="Comment" 
                                             SortExpression="Comment" />
-                                            <asp:BoundField DataField="Date_Start" HeaderText="Date_Start" 
+                                            <asp:BoundField DataField="Date_Start" HeaderText="Date Start" 
                                             SortExpression="Date_Start" />
-                                            <asp:BoundField DataField="Time_Start" HeaderText="Time_Start" 
+                                            <asp:BoundField DataField="Time_Start" HeaderText="Time Start" 
                                             SortExpression="Time_Start" />
                                     </Columns>
-                                     <selectedrowstyle backcolor="LightCyan"
-                                        forecolor="DarkBlue"
+                                     <EditRowStyle BackColor="#999999" />
+                                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                     <selectedrowstyle backcolor="#E2DED6"
+                                        forecolor="#333333"
                                     font-bold="true"/> 
+                                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                                 </asp:GridView>
                                 
                             </td>
