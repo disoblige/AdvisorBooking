@@ -61,8 +61,14 @@
                             <td style="width: 221px" valign="middle">
                                 <asp:TextBox ID="txtDate" Runat="server" Width="202px" 
                                     onclick="popupCalendar()" ReadOnly="True" />
-                                             <div id="dateField" style="display:none;position:absolute;text-align:right">
-                                    <%@ Register TagPrefix="uc1" TagName="ctlCalendar" Src="ctlCalendar.ascx" %>
+                                             <div id="dateField" 
+                                    
+                                    
+                                    
+                                    
+                                    style="display:none;position:absolute;text-align:right; top: 558px; left: 721px; height: 233px; width: 227px;">
+                                            
+                                    <%@ Register TagPrefix="uc1" TagName="ctlCalendar" Src="UserControls/ctlCalendar.ascx" %>
                                         <uc1:ctlCalendar id="ctlCalendar1" runat="server"></uc1:ctlCalendar>
                                 </div>
                             </td>
@@ -81,9 +87,7 @@
                             <td style="width: 137px; text-align: right" valign="middle">
                                 &nbsp;</td>
                             <td valign="middle" colspan="2">
-                                <asp:Label ID="Label9" runat="server" ForeColor="#CCCCCC" 
-                                    Text="Description" style="font-weight: 700"></asp:Label>
-                            </td>
+                                &nbsp;</td>
                         </tr>
                         <tr>
                             <td style="width: 137px; text-align: right" valign="middle">

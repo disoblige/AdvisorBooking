@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ctlCalendar.ascx.cs" Inherits="WebUserControl" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/AdvisorBookingServiceMasterPage.master" AutoEventWireup="true" CodeFile="Schedule.aspx.cs" Inherits="Default3" %>
 
 
 <script runat=server>
@@ -8,33 +8,49 @@
         //{
         //    Server.Transfer("Advisor.aspx");
         //}
-        Session["AdvisorID"] = Request.QueryString["AdvisorID"];
+
         ronUtil2 get = new ronUtil2(Convert.ToInt16(Request.QueryString["AdvisorID"]));
     //    DateTime listofDates= get.getAdvisor2WeekSchedule();
        //Label1.Text = "Advisor:" + get.FullName ;
-     //   string[] dates = get.getAdvisor2WeekSchedule(Convert.ToInt16(Request.QueryString["AdvisorID"]));
-    //    Calendar1.SelectedDate = DateTime.Parse(dates[dates.Length-2]);
+        string[] dates = get.getAdvisor2WeekSchedule(Convert.ToInt16(Request.QueryString["AdvisorID"]));
+        Calendar1.SelectedDate = DateTime.Parse(dates[dates.Length - 2]);
         Session["Student"] = 822459053;
+        lblAdvisorName.Text = get.FullName;
 
         
 
     }
     protected void Calendar1_SelectionChanged(object sender, EventArgs e)
     {
-            
+        Session["date"] = Calendar1.SelectedDate.ToString("MM/dd/yyyy"); 
     }
     
     </script>
 
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <form id="form1" runat="server">
+   <% Session["AdvisorID"] = Request.QueryString["AdvisorID"]; %>
     
+        <div class="post" id="post-5">
+    <div class="post-title">
+            <center>
+                <h2>
+                    <asp:Label ID="lblAdvisorName" runat="server" Text="Advisor Name"></asp:Label>  </h2>
+            </center>
+        </div>
+        <div class="post-entry">
+            <div class="post-entry-top">
+                <div class="post-entry-bottom">
   
 
-      <div style="margin:0 auto; text-align:center; Width:201px; height: 150px;">
-      &nbsp;<asp:Calendar ID="Calendar1" runat="server" BackColor="White" 
+      <div style="margin:0 auto; text-align:center; Width:201px">
+      Choose a date for your appointment
+    <asp:Calendar ID="Calendar1" runat="server" BackColor="White" 
             BorderColor="Black" Font-Names="Times New Roman" 
             Font-Size="8pt" ForeColor="Black" Height="23px" NextPrevFormat="FullMonth" 
             Width="201px" ondayrender="Calendar1_DayRender" onprerender="Calendar1_SelectionChanged" 
-            onselectionchanged="cmd" DayNameFormat="Shortest" 
+            onselectionchanged="Calendar1_SelectionChanged" DayNameFormat="Shortest" 
               ShowNextPrevMonth="False" style="margin:0 auto; text-align:center;">
             <DayHeaderStyle Font-Bold="True" Font-Size="7pt" ForeColor="#333333" 
                 Height="10pt" BackColor="#EEEEEE" />
@@ -50,14 +66,24 @@
         </asp:Calendar>
 
     
+    
+           </div>
+      <div style="margin:0 auto; text-align:left; Width:196px">
+          <asp:Button  ID="Button2" runat="server" Text="Continue" CausesValidation="false" OnClick="cmd" Width="81px" />
+             
+             
 
-          <div style="margin:0 auto; text-align:left; Width:401px">
-          
-          
- 
-          
-          </div>
+
+
+
+   
 
     
            </div>
            <br />
+
+    </div></div></div></div>
+    </form>
+
+</asp:Content>
+

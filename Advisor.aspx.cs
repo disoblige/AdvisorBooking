@@ -17,7 +17,7 @@ public partial class Default2 : System.Web.UI.Page
         {
             TableCell[] td = new TableCell[8];
             HyperLink link = new HyperLink();
-            link.NavigateUrl = "~/Calendar.aspx?AdvisorID=" + ID[ii];
+            link.NavigateUrl = "~/Schedule.aspx?AdvisorID=" + ID[ii];
             for (int i = 0; i < 8; i++) { td[i] = new TableCell(); }
 
             link.Text = get.getName(ID[ii]);

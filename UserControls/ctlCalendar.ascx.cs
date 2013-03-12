@@ -135,7 +135,7 @@ public partial class WebUserControl : System.Web.UI.UserControl
 
         Session["date"] = Calendar1.SelectedDate.ToString("MM/dd/yyyy");
         if (Calendar1.SelectedDate.Date < DateTime.Now)
-        { Server.Transfer("Calendar.aspx"); }
+        { Server.Transfer("Schedule.aspx"); }
         else
         {
             Server.Transfer("Confirm.aspx");

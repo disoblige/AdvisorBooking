@@ -57,7 +57,7 @@ public partial class Default2 : System.Web.UI.Page
             
             if (availibility.Length==0)
             {Response.Write("<script type='text/javascript'>alert('It is fully booked.');</script>");
-                Server.Transfer("Calendar.aspx");}
+                Server.Transfer("Schedule.aspx");}
             
 
     }

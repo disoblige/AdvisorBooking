@@ -142,7 +142,7 @@ public partial class Default3 : System.Web.UI.Page
     {
      
         if (Calendar1.SelectedDate.Date < DateTime.Now)
-        { Server.Transfer("Calendar.aspx"); }
+        { Server.Transfer("Schedule.aspx"); }
         else {
             Server.Transfer("Confirm.aspx");
                 }
