@@ -4,13 +4,12 @@
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <div class="post" id="post-5">
                 <div class="post-title">
-                    <center>
+                 
                          <h2>
                     Book An Appointment</h2>
                          <p>
                              &nbsp;</p>
 
-                    </center>
                 </div>
                 <div class="post-entry">
                     <div class="post-entry-top">
@@ -90,8 +89,8 @@
                             <td style="width: 137px; text-align: right" valign="middle">
                                 &nbsp;</td>
                             <td valign="middle" colspan="2">
-                                <textarea id="TextArea1" name="S1" style="height: 78px; width: 226px" 
-                                    runat="server" cols="20" rows="1"></textarea></td>
+                                <textarea id="TextArea1" name="S1" style="height: 99px; width: 292px" 
+                                    runat="server"></textarea></td>
                         </tr>
                         <tr>
                             <td style="width: 137px; text-align: right" valign="middle">
