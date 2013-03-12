@@ -41,7 +41,7 @@ public partial class Default2 : System.Web.UI.Page
         { shorttime[i] = availibility[i].ToShortTimeString(); }
 
 
-        Label7.Text = get.FullName;
+        txtAdvisorName.Text = get.FullName;
 
         //Label1.Text = "Date : " + datev2.ToLongDateString();
         txtDate.Text = datev2.ToShortDateString();
