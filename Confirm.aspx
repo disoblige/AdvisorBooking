@@ -5,8 +5,8 @@
             <div class="post" id="post-5">
                 <div class="post-title">
                  
-                         <h2>
-                    Book An Appointment</h2>
+           <center>              <h2>
+                    Book An Appointment</h2></center>
                          <p>
                              &nbsp;</p>
 
