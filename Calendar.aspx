@@ -66,10 +66,10 @@
         </asp:Calendar>
 
     
-
-          <div style="margin:0 auto; text-align:left; Width:196px; height: 18px; float:left"> 
-          <asp:Button ID="Button2" runat="server" Text="Continue" 
-        CausesValidation="false" OnClick="cmd" Width="58px" />
+    
+           </div>
+      <div style="margin:0 auto; text-align:left; Width:282px">
+          <asp:Button  ID="Button2" runat="server" Text="Continue" CausesValidation="false" OnClick="cmd" Width="81px" />
              
              
 
@@ -77,7 +77,6 @@
 
 
    
-          </div>
 
     
            </div>
