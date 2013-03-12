@@ -87,7 +87,9 @@
                             <td style="width: 137px; text-align: right" valign="middle">
                                 &nbsp;</td>
                             <td valign="middle" colspan="2">
-                                &nbsp;</td>
+                                <asp:Label ID="Label5" runat="server" ForeColor="#CCCCCC" 
+                                    Text="Description" style="font-weight: 700"></asp:Label>
+                            </td>
                         </tr>
                         <tr>
                             <td style="width: 137px; text-align: right" valign="middle">
