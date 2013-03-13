@@ -15,7 +15,7 @@
                         <tr>
                             <td style="width: 137px; text-align: right" valign="middle">
                                 &nbsp;</td>
-                            <td style="width: 221px" valign="middle">
+                            <td style="width: 543px" valign="middle">
                                 &nbsp;</td>
                             <td valign="middle">
                                 &nbsp;</td>
@@ -25,8 +25,8 @@
                                 <asp:Label ID="lblStudentID" runat="server" style="font-weight: 700" 
                                     Text="Student I.D."></asp:Label>
                             </td>
-                            <td style="width: 221px" valign="middle">
-                                <asp:TextBox ID="txtStudentID" runat="server" Width="174px"></asp:TextBox>
+                            <td style="width: 543px" valign="middle">
+                                <asp:TextBox ID="txtStudentID" runat="server" Width="270px"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvStudentID" runat="server" 
                                     ErrorMessage="Student ID should not be blank" ControlToValidate="txtStudentID" 
                                     Font-Bold="True" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
@@ -43,8 +43,8 @@
                                 <asp:Label ID="Llbcomment" runat="server" style="font-weight: 700" 
                                     Text="Reason for cancel"></asp:Label>
                                 </td>
-                            <td style="width: 221px; height: 24px;" valign="top">
-                                <asp:TextBox ID="txtComments" runat="server" Width="171px" Height="69px"></asp:TextBox>
+                            <td style="width: 543px; height: 24px;" valign="top">
+                                <asp:TextBox ID="txtComments" runat="server" Width="273px" Height="69px"></asp:TextBox>
                             </td>
                             <td valign="middle" style="height: 24px">
                                 </td>
@@ -52,9 +52,11 @@
                         <tr>
                             <td style="width: 137px; height: 24px;" valign="middle">
                                 &nbsp;</td>
-                            <td style="width: 221px; height: 24px;" valign="top">
-                                <asp:Button ID="btncheck" runat="server" Text="See your appointments" 
-                                    Width="219px" onclick="btnCheck_click" />
+                            <td style="width: 543px; height: 24px;" valign="top">
+                                                          <asp:Button ID="btncheck" runat="server" Text="View appointment" 
+                                    Width="134px" onclick="btnCheck_click" />     <asp:Button ID="Button1" runat="server" Text="Cancel Appointment" 
+                                    Width="135px" onclick="Button1_Click"/>
+                             
                             </td>
                             <td valign="middle" style="height: 24px">
                                 &nbsp;</td>
@@ -62,7 +64,7 @@
                         <tr>
                         <td style="width: 137px; text-align: right" valign="middle">
                                 &nbsp;</td>
-                            <td style="width: 221px" valign="middle">
+                            <td style="width: 543px" valign="middle">
                                 &nbsp;</td>
 
                         </tr>
@@ -70,7 +72,7 @@
                         <tr>
                             <td style="width: 137px; text-align: right" valign="middle">
                                 &nbsp;</td>
-                            <td style="width:500px" valign="middle">
+                            <td style="width:543px" valign="middle">
                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                                      autogenerateselectbutton="True" selectedindex="0" 
                                     onselectedindexchanged="GridView1_SelectedIndexChanged" 
@@ -110,7 +112,7 @@
                          <tr>
                             <td style="width: 137px" valign="middle">
                                 &nbsp;</td>
-                            <td style="width: 221px" valign="middle">
+                            <td style="width: 543px" valign="middle">
                                 &nbsp;</td>
                             <td valign="middle">
                                 &nbsp;</td>

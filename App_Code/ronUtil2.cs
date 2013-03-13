@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Web.UI.WebControls;
 using System.Web.UI;
+using System.Data.SqlClient;
 /// <summary>
 /// Summary description for ronUtil2
 /// </summary>
@@ -315,7 +316,7 @@ public class ronUtil2
     }
 
 
-    public bool getCheck(int stID)
+    public bool getCheck(string stID)
     {
         int Student_Id = Convert.ToInt32(stID);
         DateTime date = DateTime.Now;
@@ -366,6 +367,47 @@ public class ronUtil2
         Char[] splitChars = new Char[] { ',' };
         string[] splitdate = date.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
         return splitdate;
+    }
+
+
+
+    //For Testing
+
+
+    public int[] getStudentIds()
+    {
+        SqlDataSource SqlDataSource2 = new SqlDataSource();
+        SqlDataSource2.ConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString();
+        SqlDataSource2.SelectCommand = "Select Student_ID From Student";
+
+        DataView view = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
+        DataTable table = view.ToTable();
+
+        //   string[] slotsTaken = new string[table.Rows.Count];
+
+        int[] Student_ID = new int[table.Rows.Count];
+
+        for (int ii = 0; ii < table.Rows.Count; ii++)
+        { Student_ID[ii] = Convert.ToInt32(table.Rows[ii][0].ToString()); }
+        return Student_ID;
+    }
+
+
+    public void CancelAppointment(string stID)
+    {
+        int Student_Id = Convert.ToInt32(stID);
+        DateTime date = DateTime.Now;
+
+        SqlConnection objconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString());
+        SqlCommand objcommand = new SqlCommand();
+        objcommand.Connection = objconnection;
+        objcommand.CommandType = CommandType.Text;
+        objcommand.CommandText = "DELETE FROM Appointment  Where Student_Id='" + Student_Id + "' AND Date>'" + date + "'";
+        objconnection.Open();
+        objcommand.ExecuteNonQuery();
+        objconnection.Close();
+
+
     }
 
 

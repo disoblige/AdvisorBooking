@@ -14,7 +14,7 @@ public partial class Default2 : System.Web.UI.Page
     {
         //Prevent exceptions,corruptions.
 
-        Session["StudentID"]=822459053;
+        
         if (Session["date"] == null || Session["AdvisorID"] == null)
             {
                 Server.Transfer("Advisor.aspx");
@@ -93,7 +93,7 @@ public partial class Default2 : System.Web.UI.Page
                 }
             }
 
-            if (proceed == true)
+            if (proceed)
             {
                 DateTime picked = new DateTime();
                 picked = DateTime.ParseExact(DropDownList1.SelectedValue.ToString(), "h:mm tt", CultureInfo.InvariantCulture);

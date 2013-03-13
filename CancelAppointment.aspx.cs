@@ -13,19 +13,13 @@ public partial class CancelAppointment : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        try { txtStudentID.Text = Session["StudentId"].ToString(); }
+        catch { }
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        
+     }
 
-            
-            
-            
-           
-
-
-    }
     public void clear()
     {
 
@@ -47,5 +41,17 @@ public partial class CancelAppointment : System.Web.UI.Page
        
         
 
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        ronUtil2 get = new ronUtil2();
+        get.CancelAppointment(Session["StudentID"].ToString());
+
+        if (Request.QueryString["AdvisorID"]!=null)
+            Server.Transfer("Schedule.aspx");
+        else
+            Server.Transfer("Advisor.aspx");
+
+        
     }
 }
