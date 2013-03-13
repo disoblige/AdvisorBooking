@@ -15,7 +15,7 @@
         
             <center>
                 <h2>
-                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>  Book An Advisor
+                    Book An Advisor
                 </h2>   
               
                 
