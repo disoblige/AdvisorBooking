@@ -20,6 +20,13 @@ public class ronUtil2
 
 
     public string FullName { get; set; }
+    
+    
+    public string First_Name { get; set; }
+    public string Last_Name { get; set; }
+    public string Employee_ID { get; set; }
+    public string Image  { get; set; }
+    public string Dept_id { get; set; }
 
     public ronUtil2()
     {
@@ -32,7 +39,7 @@ public class ronUtil2
      
         SqlDataSource SqlDataSource3 = new SqlDataSource();
         SqlDataSource3.ConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString();
-        SqlDataSource3.SelectCommand = "Select First_Name,Last_Name From Advisor Where Employee_ID='" + id.ToString() + "'";
+        SqlDataSource3.SelectCommand = "Select First_Name,Last_Name,Employee_ID,Dept_id,Image From Advisor Where Employee_ID='" + id.ToString() + "'";
 
 
         DataView view3 = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
@@ -40,10 +47,34 @@ public class ronUtil2
 
         if (table3.Rows.Count > 0)
         FullName = table3.Rows[0][0].ToString() + " " + table3.Rows[0][1].ToString();
-
+        First_Name = table3.Rows[0][0].ToString();
+        Last_Name = table3.Rows[0][1].ToString();
+        Employee_ID = table3.Rows[0][2].ToString();
+        Dept_id = table3.Rows[0][2].ToString();
+        Image = table3.Rows[0][3].ToString();
 
 	}
 
+    // FOR Advisor Page ---------------------------------------
+
+
+    public int[] getAdvisorIDs()
+    {
+        SqlDataSource SqlDataSource3 = new SqlDataSource();
+        SqlDataSource3.ConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString();
+        SqlDataSource3.SelectCommand = "Select Employee_ID From Advisor";
+
+        DataView view = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
+        DataTable table = view.ToTable();
+
+        //   string[] slotsTaken = new string[table.Rows.Count];
+
+        int[] Employee_ID = new int[table.Rows.Count];
+
+        for (int ii = 0; ii < table.Rows.Count; ii++)
+        { Employee_ID[ii] = Convert.ToInt16(table.Rows[ii][0].ToString()); }
+        return Employee_ID;
+    }
 
     public string getName(int advisor_Id)
     {
@@ -157,6 +188,7 @@ public class ronUtil2
 
 
 
+    // FOR Confirm Page----------------------------------------------------------- 
 
     public DateTime[] getSlots(int advisor_Id, string date)
     { //inttime = total available time slots as int
@@ -245,24 +277,7 @@ public class ronUtil2
     }
 
 
-
-    public int[] getAdvisorIDs()
-    {
-        SqlDataSource SqlDataSource3 = new SqlDataSource();
-        SqlDataSource3.ConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString();
-        SqlDataSource3.SelectCommand = "Select Employee_ID From Advisor";
-
-        DataView view = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
-        DataTable table = view.ToTable();
-
-        //   string[] slotsTaken = new string[table.Rows.Count];
-
-        int[] Employee_ID = new int[table.Rows.Count];
-
-        for (int ii = 0; ii < table.Rows.Count; ii++)
-        { Employee_ID[ii] = Convert.ToInt16(table.Rows[ii][0].ToString()); }
-        return Employee_ID;
-    }
+    //For Calendar ------------------------------------
 
 
     public string[] getDaysAvailable(int id)
