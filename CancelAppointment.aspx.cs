@@ -10,9 +10,10 @@ using System.Data;
 
 public partial class CancelAppointment : System.Web.UI.Page
 {
-    CancelledAppointment appointment = new CancelledAppointment();
+
     protected void Page_Load(object sender, EventArgs e)
     {
+<<<<<<< HEAD
         try {
             txtStudentID.ReadOnly = true;
             txtStudentID.Text = Session["StudentId"].ToString(); }
@@ -30,15 +31,24 @@ public partial class CancelAppointment : System.Web.UI.Page
 
 
     }
+=======
+        try { txtStudentID.Text = Session["StudentId"].ToString(); }
+        catch { }
+    }
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+     }
+
+>>>>>>> upstream/master
     public void clear()
     {
 
-        txtComments.Text = "";
-        txtStudentID.Text = "";
+      
 
     }
     protected void btnCheck_click(object sender, EventArgs e)
     {
+<<<<<<< HEAD
         int id = Convert.ToInt32(txtStudentID.Text);
         appointment.Student_Id = id;
         DataSet ds = appointment.cancelled();
@@ -58,10 +68,13 @@ public partial class CancelAppointment : System.Web.UI.Page
             this.GridView1.DataSource = ds.Tables[0];
             this.GridView1.DataBind();
         }
+=======
+>>>>>>> upstream/master
         
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
+<<<<<<< HEAD
         GridViewRow row = GridView1.SelectedRow;
         int appointment_ID = Convert.ToInt32(row.Cells[1].Text);
         int student_ID = Convert.ToInt32(row.Cells[2].Text);
@@ -89,13 +102,33 @@ public partial class CancelAppointment : System.Web.UI.Page
         }
 
         clear();
+=======
+       
+>>>>>>> upstream/master
 
         
     }
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
+<<<<<<< HEAD
         GridView1.DataBind();
         
+=======
+       
+        
 
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        ronUtil2 get = new ronUtil2();
+        get.CancelAppointment(Session["StudentID"].ToString());
+
+        if (Request.QueryString["AdvisorID"]!=null)
+            Server.Transfer("Schedule.aspx");
+        else
+            Server.Transfer("Advisor.aspx");
+>>>>>>> upstream/master
+
+        
     }
 }
