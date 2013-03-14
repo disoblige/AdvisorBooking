@@ -61,19 +61,17 @@
                             <td style="width: 221px" valign="middle">
                                 <asp:TextBox ID="txtDate" Runat="server" Width="202px" 
                                     onclick="popupCalendar()" ReadOnly="True" />
-                                             <div id="dateField" 
-                                    
-                                    
-                                    
-                                    
-                                    style="display:none;position:absolute;text-align:right; top: 558px; left: 721px; height: 233px; width: 227px;">
-                                            
-                                    <%@ Register TagPrefix="uc1" TagName="ctlCalendar" Src="UserControls/ctlCalendar.ascx" %>
-                                        <uc1:ctlCalendar id="ctlCalendar1" runat="server"></uc1:ctlCalendar>
-                                </div>
+                                 
                             </td>
                             <td valign="middle">
-                              <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                   
+                              <div style="position:absolute">
+									 <div id="dateField" style="display:none;position:relative; left: -15px; top: 20px; height: 189px; width: 232px;">                       
+                                    <%@ Register TagPrefix="uc1" TagName="ctlCalendar" Src="UserControls/ctlCalendar.ascx" %>   <uc1:ctlCalendar id="ctlCalendar1" runat="server"></uc1:ctlCalendar></div></div>
+                         
+
+                         
+                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                     <ContentTemplate>
                                         <asp:DropDownList ID="DropDownList1" runat="server" 
                                             onselectedindexchanged="DropDownList1_SelectedIndexChanged" BackColor="White" 
