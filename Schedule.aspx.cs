@@ -18,26 +18,21 @@ public partial class Default3 : System.Web.UI.Page
    
  
     protected void Page_Load(object sender, EventArgs e)
-    {
-        
- 
-      
-
+    {            
           
     }
     protected void Calendar1_SelectionChanged(object sender, EventArgs e)
     {
 
     }
+
     protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
     {
 
-        
 
-            int id = Convert.ToInt16(Request.QueryString["ID"]);
-           ronUtil get = new ronUtil(id); 
-        
-        
+
+        int id = Convert.ToInt16(Request.QueryString["AdvisorID"]);
+        ronUtil2 get = new ronUtil2(id); 
         int length = get.DaysAvailable.Length;
         DayOfWeek[] days = new DayOfWeek[length];
 
@@ -47,13 +42,9 @@ public partial class Default3 : System.Web.UI.Page
         }
 
         e.Day.IsSelectable = false;
-        e.Cell.ForeColor = System.Drawing.Color.Gray;
-       // e.Cell.Font.Strikeout = true;
-        e.Cell.Font.Size = 10;
-            //    e.Cell.ForeColor = System.Drawing.Color.Gray;
+        e.Cell.ForeColor = System.Drawing.Color.Gray;               
         DateTime stratDate = DateTime.Today;
-        DateTime endDate = stratDate.AddDays(8);
-        //DateTime[] allDays = new DateTime[15];
+        DateTime endDate = stratDate.AddDays(8);        
 
 
         if (e.Day.Date > stratDate && e.Day.Date < endDate)
@@ -67,27 +58,19 @@ public partial class Default3 : System.Web.UI.Page
             }
             else
             {
-                e.Day.IsSelectable = true;
-              //  e.Cell.BackColor = System.Drawing.Color.AntiqueWhite;
-             //   e.Cell.Font.Name = "Courier New Baltic";
-               e.Cell.ForeColor = System.Drawing.Color.Black;
-
-
-
-
-            
+                e.Day.IsSelectable = true;              
+            //   e.Cell.ForeColor = System.Drawing.Color.Black;
                e.Cell.Font.Strikeout = false;
-               e.Cell.ForeColor = System.Drawing.Color.Red;
-               e.Cell.Font.Size=12;
-                //DAY RENDERING -ARRAY VARIABLE-.  This is the only way I can do this
+              e.Cell.ForeColor = System.Drawing.Color.OrangeRed;
+               e.Cell.Font.Size=9;
+               
                 if (length == 1)
                 {
                     if (e.Day.Date.DayOfWeek != days[0])
                     {
-                        e.Day.IsSelectable = false;
-                        //e.Cell.Font.Strikeout = true;
+                        e.Day.IsSelectable = false;                        
                         e.Cell.ForeColor = System.Drawing.Color.Gray;
-                        e.Cell.Font.Size = 10;
+                        e.Cell.Font.Size = 8;
                     }
                 }
 
@@ -98,9 +81,8 @@ public partial class Default3 : System.Web.UI.Page
                     if (e.Day.Date.DayOfWeek != days[0] && e.Day.Date.DayOfWeek != days[1])
                     {
                         e.Day.IsSelectable = false;
-                        //e.Cell.Font.Strikeout = true;
                         e.Cell.ForeColor = System.Drawing.Color.Gray;
-                        e.Cell.Font.Size = 10;
+                        e.Cell.Font.Size = 8;
                     }
                 }
 
@@ -110,10 +92,9 @@ public partial class Default3 : System.Web.UI.Page
                 {
                     if (e.Day.Date.DayOfWeek != days[0] && e.Day.Date.DayOfWeek != days[1] && e.Day.Date.DayOfWeek != days[2])
                     {
-                        e.Day.IsSelectable = false;
-                        //e.Cell.Font.Strikeout = true;
+                        e.Day.IsSelectable = false;                        
                         e.Cell.ForeColor = System.Drawing.Color.Gray;
-                        e.Cell.Font.Size = 10;
+                        e.Cell.Font.Size = 8;
                     }
                 }
 
@@ -122,10 +103,9 @@ public partial class Default3 : System.Web.UI.Page
                 {
                     if (e.Day.Date.DayOfWeek != days[0] && e.Day.Date.DayOfWeek != days[1] && e.Day.Date.DayOfWeek != days[2] && e.Day.Date.DayOfWeek != days[3])
                     {
-                        e.Day.IsSelectable = false;
-                        //e.Cell.Font.Strikeout = true;
+                        e.Day.IsSelectable = false;                        
                         e.Cell.ForeColor = System.Drawing.Color.Gray;
-                        e.Cell.Font.Size = 10;
+                        e.Cell.Font.Size = 8;
                     }
                 }
 
@@ -134,10 +114,9 @@ public partial class Default3 : System.Web.UI.Page
                 {
                     if (e.Day.Date.DayOfWeek != days[0] && e.Day.Date.DayOfWeek != days[1] && e.Day.Date.DayOfWeek != days[2] && e.Day.Date.DayOfWeek != days[3] && e.Day.Date.DayOfWeek != days[4])
                     {
-                        e.Day.IsSelectable = false;
-                       //e.Cell.Font.Strikeout = true;
+                        e.Day.IsSelectable = false;                       
                         e.Cell.ForeColor = System.Drawing.Color.Gray;
-                        e.Cell.Font.Size = 10;
+                        e.Cell.Font.Size = 8;
                     }
                 }
 
@@ -163,10 +142,14 @@ public partial class Default3 : System.Web.UI.Page
     {
      
         if (Calendar1.SelectedDate.Date < DateTime.Now)
-        { Server.Transfer("Calendar.aspx"); }
+        { Server.Transfer("Schedule.aspx"); }
         else {
             Server.Transfer("Confirm.aspx");
                 }
+
+    }
+    protected void Calendar1_DayRender(object sender, EventArgs e)
+    {
 
     }
 }
