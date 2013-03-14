@@ -13,9 +13,23 @@ public partial class CancelAppointment : System.Web.UI.Page
     CancelledAppointment appointment = new CancelledAppointment();
     protected void Page_Load(object sender, EventArgs e)
     {
+        try {
+            txtStudentID.ReadOnly = true;
+            txtStudentID.Text = Session["StudentId"].ToString(); }
+        catch { }
 
     }
-    
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        
+
+            
+            
+            
+           
+
+
+    }
     public void clear()
     {
 
@@ -44,7 +58,7 @@ public partial class CancelAppointment : System.Web.UI.Page
             this.GridView1.DataSource = ds.Tables[0];
             this.GridView1.DataBind();
         }
-
+        
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -65,8 +79,8 @@ public partial class CancelAppointment : System.Web.UI.Page
               "MessageBox",
               "alert('Appointment has been cancelled');",
               true);
-
-
+            
+           
         }
 
         catch (Exception ex)
@@ -76,12 +90,12 @@ public partial class CancelAppointment : System.Web.UI.Page
 
         clear();
 
-
+        
     }
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
         GridView1.DataBind();
-
+        
 
     }
 }
