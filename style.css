@@ -35,7 +35,11 @@ img {
 #page {
 	margin: 0 auto;
 	width: 1004px;
+<<<<<<< HEAD
 	background: url("images/page.gif") repeat-y;
+=======
+	background: url("images/page.jpg") repeat-y;
+>>>>>>> origin/master
 }
 
 #page-top {
@@ -182,7 +186,11 @@ img {
 	
 	#sidebar {
 		float: left;
+<<<<<<< HEAD
 		width: 341px;
+=======
+		width: 190px;
+>>>>>>> origin/master
 		font: normal 12px/18px Verdana;
 		color: #8b919b;
 		margin-top: 68px;
@@ -309,22 +317,40 @@ img {
 	
 	#content {
 		float: left;
+<<<<<<< HEAD
 		width: 599px;
 	}
+=======
+		width: 759px;
+    height: 29px;
+}
+>>>>>>> origin/master
 	
 	/* Main - Content - Post */
 	
 	#content .post {
 		float: left;
+<<<<<<< HEAD
 		margin-bottom: 20px;
 		width: 599px;
 	}
+=======
+		margin-bottom: 0px;
+		width: 709px;
+    height: 29px;
+}
+>>>>>>> origin/master
 	
 		/* Post - Title */
 		
 		#content .post .post-title {
+<<<<<<< HEAD
 			width: 599px;
 			height: 59px;
+=======
+			width: 750px;
+			height: 32px;
+>>>>>>> origin/master
 			color: #8da3a8;
 			font: normal 12px Verdana;
 			margin-bottom: 8px;
@@ -402,7 +428,11 @@ img {
 			
 			#content .post .post-title .post-title-info .post-title-comments {
 				float: left;
+<<<<<<< HEAD
 				background: url("images/icon_comments.gif") no-repeat left center;
+=======
+				/*background: url("images/icon_comments.gif") no-repeat left center;*/
+>>>>>>> origin/master
 				padding: 0 0 0 20px;
 				height: 20px;
 				line-height: 20px;
@@ -410,6 +440,7 @@ img {
 		
 		/* Post - Entry */
 		
+<<<<<<< HEAD
 		#content .post .post-entry {
 			font: normal 12px/20px Arial, Verdana;
 			color: #797f88;
@@ -426,6 +457,26 @@ img {
 				background: url("images/post_entry_bottom.gif") no-repeat left bottom;
 				padding: 1px 9px 1px 6px;
 				width: 584px;
+=======
+			#content .post .post-entry-top {
+				background: url("images/post_entry_top.jpg") no-repeat;
+				width: 759px;
+			}
+			
+		#content .post .post-entry {
+			font: normal 12px/20px Arial, Verdana;
+			color: #797f88;
+			width: 759px;
+			background: url("images/post_entry.jpg") repeat-y;
+		}
+		
+		
+			
+			#content .post .post-entry-bottom {
+				background: url("images/post_entry_bottom.jpg") no-repeat left bottom;
+				padding:  0px  0px 9px 6px;
+				width: 759px;
+>>>>>>> origin/master
 			}
 		
 		#content .post .post-entry a {
@@ -514,7 +565,11 @@ img {
 		#content .post #commentform {
 			font: normal 12px/20px Arial, Verdana;
 			color: #797f88;
+<<<<<<< HEAD
 			width: 559px;
+=======
+			width: 759px;
+>>>>>>> origin/master
 			padding-left: 25px;
 			margin: 0;
 		}
@@ -533,7 +588,11 @@ img {
 	#content .navigation {
 		color: #9cb72f;
 		float: left;
+<<<<<<< HEAD
 		width: 599px;
+=======
+		width: 799px;
+>>>>>>> origin/master
 	}
 	
 	#content .navigation a {
@@ -560,10 +619,20 @@ img {
 
 #footer {
 	width: 590px;
+<<<<<<< HEAD
 	height: 36px;
 	padding: 5px 17px 37px 397px;
 	color: #4c576a;
 	font: normal 12px/36px Arial, Verdana;
+=======
+	height: 0px;
+	padding: 5px 17px 37px 397px;
+	color: #4c576a;
+	font: normal 12px/36px Arial, Verdana;
+	position:relative;
+    top: 36px;
+    left: 0px;
+>>>>>>> origin/master
 }
 
 #footer a {
@@ -578,4 +647,19 @@ img {
 .wt {
 	color: #4c576a;
 text-decoration: none;
+<<<<<<< HEAD
+=======
+}
+
+.calendar
+{
+
+	width:500px;
+	margin:0px auto;
+	text-align:center;
+	padding:15px;
+	border:1px dashed #333;
+	background-color:#eee;
+  position :relative;
+>>>>>>> origin/master
 }

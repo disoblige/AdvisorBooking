@@ -21,6 +21,7 @@
                             <td style="width: 137px; text-align: right" valign="middle">
                                 &nbsp;</td>
                             <td style="width: 221px" valign="middle">
+<<<<<<< HEAD
                                 <asp:DropDownList ID="DropDownList1" runat="server" 
                                     DataSourceID="SqlDataSource1" DataTextField="Student_ID" 
                                     DataValueField="Student_ID">
@@ -30,6 +31,9 @@
                                     SelectCommand="SELECT [Student_ID] FROM [Registeration]">
                                 </asp:SqlDataSource>
                             </td>
+=======
+                                &nbsp;</td>
+>>>>>>> origin/master
                             <td valign="middle">
                                 &nbsp;</td>
                         </tr>

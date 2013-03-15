@@ -17,14 +17,21 @@
 
                     <table style="width: 100%">
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px; text-align: right" valign="middle">
                                 &nbsp;</td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px; text-align: right" valign="middle">
+                                &nbsp;</td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 &nbsp;</td>
                             <td valign="middle">
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px; text-align: right" valign="middle">
                                 <asp:Label ID="lblUploadPhoto" runat="server" style="font-weight: 700" 
                                     Text="Photo"></asp:Label>
@@ -41,6 +48,12 @@
                                 <asp:Label ID="lblName" runat="server" style="font-weight: 700" Text="Name"></asp:Label>
                             </td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px; text-align: right" valign="middle">
+                                <asp:Label ID="lblName" runat="server" style="font-weight: 700" Text="Name"></asp:Label>
+                            </td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 <asp:TextBox ID="txtFName" runat="server" Width="174px"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvFName" runat="server" 
                                     ErrorMessage="First Name should not be blank" ControlToValidate="txtFName" 
@@ -60,9 +73,15 @@
                             </td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px" valign="middle">
                                 &nbsp;</td>
                             <td style="text-align: center; width: 152px" valign="middle">
+=======
+                            <td style="width: 137px" valign="middle">
+                                &nbsp;</td>
+                            <td style="text-align: center; width: 221px" valign="middle">
+>>>>>>> origin/master
                                 <asp:Label ID="lblFName" runat="server" style="font-weight: 700" 
                                     Text="(First Name)"></asp:Label>
                             </td>
@@ -72,11 +91,19 @@
                             </td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px; text-align: right" valign="middle">
                                 <asp:Label ID="lblStudentID" runat="server" style="font-weight: 700" 
                                     Text="Student I.D."></asp:Label>
                             </td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px; text-align: right" valign="middle">
+                                <asp:Label ID="lblStudentID" runat="server" style="font-weight: 700" 
+                                    Text="Student I.D."></asp:Label>
+                            </td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 <asp:TextBox ID="txtStudentID" runat="server" Width="174px"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvStudentID" runat="server" 
                                     ErrorMessage="Student ID should not be blank" ControlToValidate="txtStudentID" 
@@ -89,6 +116,7 @@
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px; text-align: right" valign="middle">
                                 <asp:Label ID="lblProgramName" runat="server" style="font-weight: 700" 
                                     Text="Program Name"></asp:Label>
@@ -110,6 +138,25 @@
                                     Text="Current Semester"></asp:Label>
                             </td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px; text-align: right" valign="middle">
+                                <asp:Label ID="lblProgramName" runat="server" style="font-weight: 700" 
+                                    Text="Program Name"></asp:Label>
+                            </td>
+                            <td style="width: 221px" valign="middle">
+                                <asp:DropDownList ID="ddlProgramName" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                            <td valign="middle">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 137px; text-align: right" valign="middle">
+                                <asp:Label ID="lblCurrentSemester" runat="server" style="font-weight: 700" 
+                                    Text="Current Semester"></asp:Label>
+                            </td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 <asp:TextBox ID="txtCurrentSemester" runat="server" Width="79px"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvCurrentSemester" runat="server" 
                                     ErrorMessage="CurrentSemester should not be blank" ControlToValidate="txtCurrentSemester" 
@@ -122,11 +169,19 @@
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px; text-align: right;" valign="middle">
                                 <asp:Label ID="lblEmailID" runat="server" style="font-weight: 700" 
                                     Text="Email ID"></asp:Label>
                             </td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px; text-align: right;" valign="middle">
+                                <asp:Label ID="lblEmailID" runat="server" style="font-weight: 700" 
+                                    Text="Email ID"></asp:Label>
+                            </td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 <asp:TextBox ID="txtEmailID" runat="server" Width="174px"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvEmailID" runat="server" 
                                     ErrorMessage="Email ID should not be blank" ControlToValidate="txtEmailID" 
@@ -140,11 +195,19 @@
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px; text-align: right;" valign="middle">
                                 <asp:Label ID="lblPassword" runat="server" style="font-weight: 700" 
                                     Text="Password"></asp:Label>
                             </td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px; text-align: right;" valign="middle">
+                                <asp:Label ID="lblPassword" runat="server" style="font-weight: 700" 
+                                    Text="Password"></asp:Label>
+                            </td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 <asp:TextBox ID="txtPassword" runat="server" Width="174px" TextMode="Password"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvPassword" runat="server" 
                                     ErrorMessage="Password should not be blank" ControlToValidate="txtPassword" 
@@ -154,11 +217,19 @@
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px; text-align: right;" valign="middle">
                                 <asp:Label ID="lblConfirmPassword" runat="server" style="font-weight: 700" 
                                     Text="Confirm Password"></asp:Label>
                             </td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px; text-align: right;" valign="middle">
+                                <asp:Label ID="lblConfirmPassword" runat="server" style="font-weight: 700" 
+                                    Text="Confirm Password"></asp:Label>
+                            </td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 <asp:TextBox ID="txtConfirmPassword" runat="server" Width="174px" 
                                     TextMode="Password"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvConfirmPassword" runat="server" 
@@ -172,25 +243,43 @@
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px" valign="middle">
                                 &nbsp;</td>
                             <td style="width: 152px" valign="middle">
+=======
+                            <td style="width: 137px" valign="middle">
+                                &nbsp;</td>
+                            <td style="width: 221px" valign="middle">
+>>>>>>> origin/master
                                 &nbsp;</td>
                             <td valign="middle">
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px" valign="middle">
                                 &nbsp;</td>
                             <td style="width: 152px" valign="middle">
                                 <asp:Button ID="btnRegister" runat="server" Text="Register" 
                                     Width="219px" onclick="btnRegister_Click" />
+=======
+                            <td style="width: 137px" valign="middle">
+                                &nbsp;</td>
+                            <td style="width: 221px" valign="middle">
+                                <asp:Button ID="btnRegister" runat="server" Text="Register" 
+                                    Width="219px" />
+>>>>>>> origin/master
                             </td>
                             <td valign="middle">
                                 &nbsp;</td>
                         </tr>
                         <tr>
+<<<<<<< HEAD
                             <td style="width: 278px" valign="middle">
+=======
+                            <td style="width: 137px" valign="middle">
+>>>>>>> origin/master
                                 &nbsp;</td>
                             <td colspan="2" valign="middle">
                                 <asp:ValidationSummary ID="ValidationSummary" runat="server" 
