@@ -8,7 +8,7 @@ using System.Web.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 
-public partial class SearchAppointment : System.Web.UI.Page
+public partial class CancelAppointment : System.Web.UI.Page
 {
     SearchedAppointment appointment = new SearchedAppointment();
     protected void Page_Load(object sender, EventArgs e)
