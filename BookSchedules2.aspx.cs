@@ -11,7 +11,7 @@ public partial class TemplateForm : System.Web.UI.Page
     {
 
 
-        GridView2.DataBind();
+        GridView1.DataBind();
     }
     protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
     {
