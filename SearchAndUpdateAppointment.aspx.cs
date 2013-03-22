@@ -8,9 +8,9 @@ using System.Web.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 
-public partial class CancelAppointment : System.Web.UI.Page
+public partial class SearchAppointment : System.Web.UI.Page
 {
-    CancelledAppointment appointment = new CancelledAppointment();
+    SearchedAppointment appointment = new SearchedAppointment();
     protected void Page_Load(object sender, EventArgs e)
     {
         try { txtStudentID.Text = Session["StudentId"].ToString(); }
@@ -22,9 +22,9 @@ public partial class CancelAppointment : System.Web.UI.Page
 
     public void clear()
     {
-         
-    
-      
+
+
+
         txtStudentID.Text = "";
       
 
